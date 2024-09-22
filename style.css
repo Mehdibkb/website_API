@@ -8,11 +8,124 @@
     --clr-blanc : #ffffff;
     --clr-navbar : #ffd900;
     --clr-icon : #263238;
+    --clr-gris: #263238;
 
-    font-size: 16px;
+    --font-size: 16px;
     --raduis : 0.2em;
 }
+@font-face {
+    font-family: 'Mantinia';
+    src: url('police_siteweb/Mantinia.otf') format('opentype'); /* chemin d'acces */
+}
+
 body {
     margin: 0;
-    font-family: 'Mantinia';
+    font-family: 'Mantinia', sans-serif; /* sans-serif est une police de secours */
+    font-size: var(--font-size);
+    color:var(--clr-icon);
+    background-color: var(--clr-arriere-plan);
+}
+
+.navbar {
+    margin: 0;
+    width: 100vw;
+    background-color: var(--clr-navbar);
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        height: 3em;
+        padding: 0%;
+    }
+
+    ul li{
+        padding-right: 2em;
+        font-weight: bold;
+        color: var(--clr-blanc);
+    }
+
+    svg {
+        fill: var(--clr-blanc);
+        height: 1.5em;
+        width: 1.5em;
+    }
+
+    li:first-child {
+        margin-right: auto;
+        margin-left: 2em;
+    }
+}
+
+#contenu-principale {
+    margin: 2em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -1em;
+}
+
+#rechercher {
+    background-color: var(--clr-blanc);
+    border-radius: var(--raduis);
+    width: 15em;
+    height: 2.5em;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    color: var(--clr-gris);
+}
+
+.position-icon {
+
+    padding: 0 .2em;
+    font-size: 1.5em;    
+}
+
+#contenu-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5em;
+}
+
+.contenu {
+    background-color: var(--clr-blanc);
+    border-radius: var(--raduis);
+    padding: 1em;
+    border-top: 4px solid var(--clr-navbar);
+
+    h2 {
+        margin-bottom: 0.2em;
+        margin-top: 0.5em;
+    }
+}
+
+@media screen and (max-width: 550px){
+    
+    body{
+        --font-size:12px;
+    }
+    #contenu-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 1.5em;
+    }
+
+    h1 {
+        margin: 0.5em 0;
+    }
+
+    #rechercher {
+        width: 100%;
+    }
 }
