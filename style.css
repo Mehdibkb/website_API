@@ -1,0 +1,18 @@
+*{
+   box-sizing:border-box;
+}
+
+
+:root{
+    --clr-arriere-plan : #eceff1;
+    --clr-blanc : #ffffff;
+    --clr-navbar : #ffd900;
+    --clr-icon : #263238;
+
+    font-size: 16px;
+    --raduis : 0.2em;
+}
+body {
+    margin: 0;
+    font-family: 'Mantinia';
+}
