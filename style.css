@@ -58,6 +58,16 @@ body {
     }
 }
 
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.navbar ul li:hover a {
+    color: #000000; /* Add hover effect if desired */
+}
+
 #contenu-principale {
     margin: 2em;
 }
